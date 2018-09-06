@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>辅助类</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">辅助类</h4>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">文本颜色</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.text-muted; .text-primary; .text-info; .text-success; .text-warning; .text-danger</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">背景颜色</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.bg-primary、.bg-info、.bg-success、.bg-warning、.bg-danger</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">快速浮动</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.pull-left、.pull-right、.clearfix</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">块级居中</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.center-block</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">显示和隐藏</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.show; .hide</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">关闭按钮</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>button.close[type="button"][aria-label="close"]>span[aria-hidden="true"]>{&times;}</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">下三角</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>span.caret</code>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3 style="background-color:#5bc0de">I am a list<span class="caret"></span> <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3>
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <p class="text-muted">text-muted</p>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <p class="text-primary">text-primary</p>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <p class="text-info">text-info</p>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <p class="text-success">text-success</p>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <p class="text-warning">text-warning</p>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <p class="text-danger">text-danger</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-primary">bg-primary</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-info">bg-info</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-success">bg-success</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-warning">bg-warning</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-danger">bg-danger</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-danger pull-left">pull-left</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-danger pull-right">pull-right</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-danger pull-left">pull-left</div>
+        <div class="clearfix"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-danger">bg-danger</div>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
