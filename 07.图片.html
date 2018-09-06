@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>图片</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">图片</h4>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">顶位图，宽100%，高200px</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>img[src=holder.js/100px200]</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">响应式图片</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>img.img-responsive</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">响应式图片居中</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>img.center-block</code>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-heading">
+            <h4 class="panel-title">图片样式</h4>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">圆</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>img.img-circle</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">圆角</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>img.img-rounded</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">缩略（阴影）</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>img.img-thumbnail</code>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <img src="holder.js/50px200" class="img-responsive center-block">
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <img src="holder.js/100px200">
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <img src="holder.js/100px200" class="img-rounded">
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <img src="holder.js/100px200" class="img-circle">
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <img src="holder.js/100px200" class="img-thumbnail">
+        </div>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
