@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>栅格布局</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+    <style type="text/css">
+        .col-md-1{background-color:#1b6d85;}
+        .col-md-2{background-color:#1b6d85;}
+        .col-md-3{background-color:#1b6d85;}
+        .col-md-4{background-color:#1b6d85;}
+        .col-md-5{background-color:#1b6d85;}
+        .col-md-6{background-color:#1b6d85;}
+        .col-md-7{background-color:#1b6d85;}
+        .col-md-8{background-color:#1b6d85;}
+        .col-md-9{background-color:#1b6d85;}
+        .col-md-10{background-color:#1b6d85;}
+        .col-md-11{background-color:#1b6d85;}
+        .col-md-12{background-color:#1b6d85;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">栅格布局</h1>
+    <p class="lead">行用 .row， 下面是 col-xx-* 为列，一行最多可支持12列，多余就自动换行</p>
+    <blockquote>
+        <ul>
+            <li>.clearfix : 响应式列表，如果换行，建议用 .clearfix 分割</li>
+            <li>.col-xx-offset-* ： 列偏移, 向右边偏移几个列</li>
+        </ul>
+    </blockquote>
+    <table class="table table-bordered">
+        <tr>
+            <th>类别</th>
+            <th>最大宽度</th>
+        </tr>
+        <tr>
+            <th>col-xs-*</th>
+            <td>自动</td>
+        </tr>
+        <tr>
+            <th>col-sm-*</th>
+            <td>750px</td>
+        </tr>
+        <tr>
+            <th>col-md-*</th>
+            <td>970px</td>
+        </tr>
+        <tr>
+            <th>col-lg-*</th>
+            <td>1170px</td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col-sm-1 col-md-1 col-lg-1">col-md-1</div>
+        <div class="col-sm-2 col-md-2 col-lg-2">col-md-2</div>
+        <div class="col-sm-3 col-md-3 col-lg-3">col-md-3</div>
+        <div class="col-sm-4 col-md-4 col-lg-4">col-md-4</div>
+        <div class="col-sm-5 col-md-5 col-lg-5">col-md-5</div>
+        <div class="col-sm-6 col-md-6 col-lg-6">col-md-6</div>
+        <div class="col-sm-7 col-md-7 col-lg-7">col-md-7</div>
+        <div class="col-sm-8 col-md-8 col-lg-8">col-md-8</div>
+        <div class="col-sm-9 col-md-9 col-lg-9">col-md-9</div>
+        <div class="col-sm-1 col-md-10 col-lg-10">col-md-10</div>
+        <div class="col-sm-11 col-md-11 col-lg-11">col-md-12</div>
+        <div class="col-sm-12 col-md-12 col-lg-12">col-md-12</div>
+    </div>
+
+    <blockquote>
+        <p>列偏移</p>
+    </blockquote>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">.col-md-4</div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">.col-md-4 .col-md-offset-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">.col-md-3 .col-md-offset-3</div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">.col-md-3 .col-md-offset-3</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">.col-md-6 .col-md-offset-3</div>
+    </div>
+</div>
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
