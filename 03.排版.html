@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>排版</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">排版</h4>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>
+                    <dl>
+                        <dt>标题</dt>
+                        <dd>h1~h6 、.h1~.h6</dd>
+                        <dd>small ： 标题内副标</dd>
+                        <dd>code ： 代码显示</dd>
+                        <dd>blockquote>p : 引用，左边有引导线</dd>
+                        <dd>blockquote.blockquote-reverse>p : 引用，右边有引导线</dd>
+                        <dd>blockquote>(p+footer) : 引用带角标，左边有引导线</dd>
+                        <dd>ul、ol ： 普通列表</dd>
+                        <dd>(ul、ol).list-unstyled ： 无样式列表</dd>
+                        <dd>(ul、ol).list-inline ： 内联列表</dd>
+                        <dd>dl>(dt+dd) ： 描述，直排</dd>
+                        <dd>dl.dl-horizontal>(dt+dd) ： 描述，横排</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>主体</dt>
+                        <dd>p</dd>
+                        <dd>p.lead : 段落突出</dd>
+                        <dd>mark : 内联文本高亮</dd>
+                        <dd>.well(默认、.well-lg、.well-sm) : 框选文本</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>文本对齐和阶段</dt>
+                        <dd>.text-left、.text-center、text-right : 文本对齐</dd>
+                        <dd>.text-overflow ： 自动截断</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>大小写转化</dt>
+                        <dd>.text-lowercase : 全部小写（对英文）</dd>
+                        <dd>.text-uppercase : 全部大写（对英文）</dd>
+                        <dd>.text-capitalize : 首字母大写（对英文）</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>字体效果</dt>
+                        <dd>s、del : 删除效果</dd>
+                        <dd>u、ins : 下划线效果</dd>
+                        <dd>b、strong : 加粗效果</dd>
+                        <dd>i、em : 斜体效果</dd>
+                        <dd>small : 小号文本效果</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>特殊</dt>
+                        <dd>abbr[title=xx] : 普通提示效果</dd>
+                        <dd>abbr.initialism[title=xx] : 小字号提示效果</dd>
+                        <dd>address : 地址</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1 class="page-header">page-header <small>small</small></h1>
+        <p class="lead">lead lead</p>
+        <p><mark>mark</mark></p>
+        <p class="well">well status</p>
+        <p>sss <span class="well well-sm">well</span> <span class="well well-lg">well large</span></p>
+        <p><del>del</del> <s>ssssss</s></p>
+        <p><ins>ins</ins> <u>uuuuuu</u></p>
+        <p><strong>strong</strong> <b>bbbbbb</b></p>
+        <p><em>em em</em> <i>iiiiii</i></p>
+        <p><small>small</small></p>
+        <p><code>code</code></p>
+        <p class="text-left">text-left</p>
+        <p class="text-center">text-center</p>
+        <p class="text-right">text-right</p>
+        <p class="text-lowercase">Lowercased text.</p>
+        <p class="text-uppercase">Uppercased text.</p>
+        <p class="text-capitalize">Capitalized text.</p>
+        <p><abbr title="HyperText Markup Language">HTML is good</abbr></p>
+        <p><abbr title="HyperText Markup Language" class="initialism">HTML is good</abbr></p>
+        <p><address>成都市天府新区</address></p>
+        <blockquote>
+            <p>blockquote blockquote </p>
+            <footer>footer footer footer</footer>
+        </blockquote>
+        <blockquote class="blockquote-reverse">
+            <p>blockquote-reverse blockquote-reverse </p>
+            <footer>footer footer footer</footer>
+        </blockquote>
+        <ul>
+            <li>list list</li>
+            <li>list list</li>
+            <li>list list</li>
+        </ul>
+        <ul class="list-unstyled">
+            <li>unstyled list</li>
+            <li>unstyled list</li>
+            <li>unstyled list</li>
+        </ul>
+        <ul class="list-inline">
+            <li>inline list</li>
+            <li>inline list</li>
+            <li>inline list</li>
+        </ul>
+        <dl>
+            <dt>标题</dt>
+            <dd>内容 内容</dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>标题</dt>
+            <dd>内容 内容</dd>
+            <dd>内容 内容</dd>
+            <dd>内容 内容</dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>标题</dt>
+            <dd>内容 内容</dd>
+            <dd>内容 内容</dd>
+            <dd>内容 内容</dd>
+        </dl>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
