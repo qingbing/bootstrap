@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>代码</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">代码</h4>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>code ： 内联代码</li>
+                <li>kbd ： 用户输入</li>
+                <li>pre ： 代码块</li>
+                <li>var ： 变量</li>
+                <li>samp ： 程序输出</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <p>xxxxxx  <code>code</code>  xxxxxx</p>
+        <p>xxxxxx  <kbd>kbd</kbd>  xxxxxx</p>
+        <pre>
+use Scf\Config\Reader;
+// 定义环境变量
+defined("ENV") or define("ENV", "product");
+// 定义配置存放目录
+defined("CONFIG_PATH") or define("CONFIG_PATH", dirname(realpath(".")) . "/conf");
+// 定义配置缓存的存放目录
+defined("RUNTIME_PATH") or define("RUNTIME_PATH", dirname(realpath(".")) . "/runtime");
+</pre>
+        <p>xxxxxx  <var>var</var>  xxxxxx</p>
+        <p>xxxxxx  <samp>samp</samp>  xxxxxx</p>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
