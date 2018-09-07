@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>导航</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">baidu.com</a></li>
+                        <li><a href="#">google.com</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="#">163.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        User Center <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Change Info</a></li>
+                        <li><a href="#">Reset Password</a></li>
+                        <li><a href="#">Update Image</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <span class="navbar-text">This is a text.
+                <a href="#" class="navbar-link">Register</a>
+            </span>
+            <button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+            <form action="#" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input input-group-btn">
+                            <button type="submit" class="btn btn-primary">Go !</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mynavbar1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">baidu.com</a></li>
+                        <li><a href="#">google.com</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="#">163.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        User Center <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Change Info</a></li>
+                        <li><a href="#">Reset Password</a></li>
+                        <li><a href="#">Update Image</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <span class="navbar-text">This is a text.
+                <a href="#" class="navbar-link">Register</a>
+            </span>
+            <button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+            <form action="#" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input input-group-btn">
+                            <button type="submit" class="btn btn-primary">Go !</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1 class="page-header">导航</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>导航</dt>
+                <dd>.navbar.navbar-default>.navbar-header</dd>
+                <dd>.nav.navbar-nav、.navbar-form、.navbar-btn、.navbar-text</dd>
+                <dd>.nav.navbar-nav.navbar-right</dd>
+                <dd>.navbar-left、navbar-right ： 左右排列漂浮</dd>
+                <dd>.navbar-form : 支持表单元素</dd>
+                <dd>.navbar-text>.navbar-link : 链接</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>整齐导航</dt>
+                <dd>.navbar-default（默认颜色）、.navbar-inverse（反色）</dd>
+                <dd>.navbar-fixed-top : 一直在顶端，会占用50px的高度，覆盖一部分内容，因此建议加入样式"body{padding-top:65px;}"</dd>
+                <dd>.navbar-fixed-bottom : 一直在底部，会占用50px的高度，覆盖一部分内容，因此建议加入样式"body{padding-bottom:65px;}"</dd>
+                <dd>.navbar-static-top : 静止在顶部，创建一个与页面等宽度的导航条，它会随着页面向下滚动而消失</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="row">
+    <p>this is line 001</p>
+    <p>this is line 002</p>
+    <p>this is line 003</p>
+    <p>this is line 004</p>
+    <p>this is line 005</p>
+    <p>this is line 006</p>
+    <p>this is line 007</p>
+    <p>this is line 008</p>
+    <p>this is line 009</p>
+    <p>this is line 010</p>
+    <p>this is line 011</p>
+    <p>this is line 012</p>
+    <p>this is line 013</p>
+    <p>this is line 014</p>
+    <p>this is line 015</p>
+    <p>this is line 016</p>
+    <p>this is line 017</p>
+    <p>this is line 018</p>
+    <p>this is line 019</p>
+    <p>this is line 020</p>
+</div>
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
