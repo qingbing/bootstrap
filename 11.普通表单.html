@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>普通表单</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">表单</h4>
+        </div>
+        <div class="panel-body form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 col-md-3 col-lg-3 control-label">表单：</label>
+                <div class="col-sm-9 col-md-9 col-lg-9">
+                    <div class="form-control-static"><pre>
+form : 普通表单
+form.form-inline : 内联表单
+.form-group、.form-control、.checkbox、.checkbox-inline、.radio、.radio-inline
+.input-group、.input-group-addon
+input-group-lg、默认、input-group-sm、input-group-xs
+[disabled] ： 禁用，值是不能传递的
+[readonly] ： 只读，值可以传递的
+fieldset ： 可以加readonly或disabled属性，将内部的所有表单元素全部构建成只读
+在.from-group中加入 .has-error、.has-success、has-danger ，可以改变颜色
+help-block : 在.from-group中加入，显示提示信息
+.form-control+(.input-lg、默认、.input-sm、.input-xs) : 控制尺寸
+                    </pre></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-md-3 col-lg-3 control-label">水平排列的表单：</label>
+                <div class="col-sm-9 col-md-9 col-lg-9">
+                    <div class="form-control-static"><pre>
+form.form-horizontal : 水平排列的表单
+label.control-label : label居右
+div.form-control-static : 文字占位对其
+.form-group+(.form-group-lg、默认、.form-group-sm、.form-group-xs) : 横排尺寸控制，包括内部文字和表单元素
+                    </pre></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-heading">
+            <h4 class="panel-title">水平排列的表单</h4>
+        </div>
+        <div class="panel-body"></div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container">
+    <form action=""  class="form-horizontal">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-btn"><button class="btn btn-info">Search</button></span>
+                    <input type="text" name="keyword" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-alert"></span></div>
+                    <input type="text" name="keyword" class="form-control">
+                    <span class="input-group-btn"><button class="btn btn-warning">Search</button></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            网址 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)">baidu</a></li>
+                            <li><a href="javascript:void(0)">google</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a href="javascript:void(0)">wangyi</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" name="what" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" name="keyword" class="form-control">
+                    <div class="input-group-btn">
+                        <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">网址 <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="javascript:void(0)">baidu</a></li>
+                            <li><a href="javascript:void(0)">google</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a href="javascript:void(0)">wangyi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default">网址</button>
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-adjust"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)">baidu</a></li>
+                            <li><a href="javascript:void(0)">google</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a href="javascript:void(0)">wangyie</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" name="key" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" name="key" class="form-control">
+                    <div class="input-group-btn">
+                        <button class="btn btn-warning"><span class="glyphicon glyphicon-align-center"></span></button>
+                        <button class="btn btn-warning"><span class="glyphicon glyphicon-align-center"></span></button>
+                        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">sites</button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="javascript:void(0)">baidu</a></li>
+                            <li><a href="javascript:void(0)">google</a></li>
+                            <li><a href="javascript:void(0)">wangyi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><input type="radio" name="name"></div>
+                    <input type="text" class="form-control" name="key">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><input type="checkbox" name="checkbox"></div>
+                    <input type="text" class="form-control" name="key">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 col-md-3 col-lg-3 control-label">姓名：</label>
+            <div class="col-sm-9 col-md-9 col-lg-9">
+                <div class="form-control-static">qingbing</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username" class="col-sm-3 col-md-3 col-lg-3 control-label">用户名(disabled)：</label>
+            <div class="col-sm-9 col-md-9 col-lg-9">
+                <input type="text" name="username1" disabled="disabled" placeholder="username" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username" class="col-sm-3 col-md-3 col-lg-3 control-label">用户名(readonly)：</label>
+            <div class="col-sm-9 col-md-9 col-lg-9">
+                <input type="text" name="username2" readonly="readonly" placeholder="username" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username" class="col-sm-3 col-md-3 col-lg-3 control-label">用户名：</label>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <input type="text" name="username2" placeholder="username" class="form-control">
+            </div>
+            <span class="col-sm-3 col-md-3 col-lg-3 help-block">提示信息</span>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="username" class="col-sm-3 col-md-3 col-lg-3 control-label">用户名：</label>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <input type="text" name="username2" placeholder="username" class="form-control">
+                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+            <span class="col-sm-3 col-md-3 col-lg-3 help-block">提示信息</span>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-9 col-md-9 col-lg-9 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+                <input type="submit" value="submit" class="btn btn-primary">
+                <input type="reset" value="submit" class="btn btn-warning">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <form action="">
+        <div class="form-group has-error">
+            <label for="username">用户名：</label>
+            <input type="text" name="username" id="username" placeholder="username" class="form-control">
+        </div>
+        <div class="form-group has-success">
+            <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <input type="text" class="form-control" placeholder="Amount">
+                <div class="input-group-addon">.00</div>
+            </div>
+        </div>
+        <div class="form-group has-warning">
+            <label for="city">城市：</label>
+            <select name="city" id="city" class="form-control">
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="天津">天津</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="username">文件选择：</label>
+            <input type="file" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="mark">留言：</label>
+            <textarea name="mark" id="mark" cols="30" rows="10" placeholder="message" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>爱好:</label>
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="1"> 篮球</label>
+            </div>
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="1"> 足球</label>
+            </div>
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="1"> 篮球</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>单选:</label>
+            <div class="radio-inline">
+                <label><input type="radio" name="1"> 篮球</label>
+            </div>
+            <div class="radio-inline">
+                <label><input type="radio" name="1"> 足球</label>
+            </div>
+            <div class="radio-inline">
+                <label><input type="radio" name="1"> 篮球</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>单选:</label>
+            <div class="radio">
+                <label><input type="radio" name="1"> 篮球</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="1"> 足球</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="1"> 篮球</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="submit" class="btn btn-primary">
+            <input type="reset" value="submit" class="btn btn-warning">
+        </div>
+    </form>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
