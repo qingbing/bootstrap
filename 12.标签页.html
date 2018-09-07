@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>标签页</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">标签页</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>标签页</dt>
+                <dd>.nav(.nav-tab、.nav-pills)</dd>
+                <dd>.disabled : 加在导航选项上，鼠标为禁用状态，功能需要自行完成</dd>
+                <dd>.nav.nav-justified : 在大于768px的屏幕上，tab和pills可以两端对齐</dd>
+                <dd>.nav.nav-pills.nav-stacked  : 垂直方向堆叠排列的胶囊导航</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Message</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    More <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">baidu</a></li>
+                    <li><a href="#">Google</a></li>
+                    <li class="divider" role="separator"></li>
+                    <li><a href="#">163</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li class="disabled"><a href="#">nav-tabs</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="nav nav-pills">
+            <li><a href="#">nav-pills</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Profile</a></li>
+            <li><a href="#">Message</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">.nav-pills.nav-stacked</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="#">nav nav-pills nav-justified</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+        </ul>
+    </div>
+</div>
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
