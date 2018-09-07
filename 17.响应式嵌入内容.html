@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>响应式嵌入内容</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="page-header">响应式嵌入内容</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>响应式嵌入内容</dt>
+                <dd>iframe、embed、video 和 object 元素上直接使用 ".embed-responsive-item"</dd>
+                <dd>.embed-responsive.embed-responsive-16by9>iframe.embed-responsive-item</dd>
+                <dd>.embed-responsive.embed-responsive-4by3>iframe.embed-responsive-item</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="http://www.baidu.com"></iframe>
+    </div>
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src="http://www.baidu.com"></iframe>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
