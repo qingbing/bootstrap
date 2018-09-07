@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>下拉菜单</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">下拉菜单</h4>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">普通下拉按钮</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.dropdown>(button[type="button"][data-toggle="dropdown"].btn.btn-info({More}+span.caret{})+(ul.dropdown-menu>(li>a[href="#"]{$$$})*3))</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">居右下拉按钮</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.dropdown.pull-right>(button[type="button"][data-toggle="dropdown"].btn.btn-info({More}+span.caret{})+(ul.dropdown-menu.dropdown-menu-right>(li>a[href="#"]{$$$})*3))</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">上下弹出方向</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.dropdown; .dropup</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">菜单放置方向</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>默认居左，ul.dropdown-menu.dropdown-menu-right</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">菜单组标题</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.dropdown-menu>.dropdown-header</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">菜单组分割线</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.dropdown-menu>.divider[role="separator"]</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">菜单禁用</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>.dropdown-menu>.disabled</code>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-heading">
+            <h4 class="panel-title">下拉菜单事件</h4>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">触发方式</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>$("#id").on("event", function(){})</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">显示时触发</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>"show.bs.dropdown"</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">显示完后触发</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>"shown.bs.dropdown"</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">隐藏时触发</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>"hide.bs.dropdown"</code>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3 text-right">隐藏完后触发</div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <code>"hidden.bs.dropdown"</code>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown" class="btn btn-info">More<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">001</a></li>
+                    <li><a href="#">002</a></li>
+                    <li><a href="#">003</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="dropdown pull-right">
+                <button type="button" data-toggle="dropdown" class="btn btn-info">More<span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">001</a></li>
+                    <li><a href="#">002</a></li>
+                    <li><a href="#">003</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="dropup">
+                <button type="button" data-toggle="dropdown" class="btn btn-info">More<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">001</a></li>
+                    <li><a href="#">002</a></li>
+                    <li><a href="#">003</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="dropup pull-right">
+                <button type="button" data-toggle="dropdown" class="btn btn-info">More<span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">001</a></li>
+                    <li><a href="#">002</a></li>
+                    <li><a href="#">003</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="dropdown">
+                <button class="btn btn-default" data-toggle="dropdown" aria-expanded="false">更多 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">网址</li>
+                    <li><a href="javascript:void(0)">百度</a></li>
+                    <li><a href="javascript:void(0)">Google</a></li>
+                    <li><a href="javascript:void(0)">网易</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">English</li>
+                    <li><a href="javascript:void(0)">baidu</a></li>
+                    <li><a href="javascript:void(0)">Google</a></li>
+                    <li><a href="javascript:void(0)">163</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">disabled</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
