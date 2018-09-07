@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>警告框</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="page-header">警告框</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>警告框</dt>
+                <dd>.alert.alert-info[role="alert"]>span.close[data-dismiss="alert"]{&amp;times;}</dd>
+                <dd>.alert.alert-success[role="alert"]>span.close[data-dismiss="alert"]{&amp;times;}</dd>
+                <dd>.alert.alert-warning[role="alert"]>span.close[data-dismiss="alert"]{&amp;times;}</dd>
+                <dd>.alert.alert-danger[role="alert"]>span.close[data-dismiss="alert"]{&amp;times;}</dd>
+                <dd>.alert>a.alert-link : 警告链接</dd>
+                <dt>方法</dt>
+                <dd>.alert('close')</dd>
+                <dt>支持事件</dt>
+                <dd>"close.bs.alert" : 当 执行close 时，触发的事件函数</dd>
+                <dd>"closed.bs.alert" : 当 执行close后，触发的事件函数</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="alert alert-info">This is alert information for alert-info. <span class="close" data-dismiss="alert">&times;</span></div>
+        <div class="alert alert-success">This is <a href="#" class="alert-link">alert</a> information for alert-success. <span class="close" data-dismiss="alert">&times;</span></div>
+        <div class="alert alert-warning">This is alert information for alert-warning. <span class="close" data-dismiss="alert">&times;</span></div>
+        <div class="alert alert-danger">This is alert information for alert-danger. <span class="close" data-dismiss="alert">&times;</span></div>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
