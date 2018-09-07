@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>分页</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="page-header">分页</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>分页</dt>
+                <dd>ul.pagination</dd>
+                <dd>li.disable : 禁用</dd>
+                <dd>li.active : 激活</dd>
+                <dd>li.pagination-lg、默认、li.pagination-sm</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>上下翻页</dt>
+                <dd>ul.pager>((li>a{Previous})+(li>a{Next}))</dd>
+                <dd>两端对齐 ： ul.pager>((li.previous>a{Previous})+(li.next>a{Next}))</dd>
+                <dd>选项也可以用.disabled来禁用</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ul class="pagination pagination-lg">
+            <li><a href="#">&laquo;</a></li>
+            <li class="disabled"><a href="#">..</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="disabled"><a href="#">..</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="pagination pagination-sm">
+            <li><a href="#">&laquo;</a></li>
+            <li class="disabled"><a href="#">..</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="pager">
+            <li class="previous"><a href="#"><span>&larr;</span> Previous</a></li>
+            <li class="next"><a href="#">Next <span>&rarr;</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
