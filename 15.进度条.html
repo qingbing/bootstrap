@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>进度条</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">进度条</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>进度条</dt>
+                <dd>.progress>progress-bar[role="progressbar"]</dd>
+                <dd>.progress>progress-bar(.progress-bar-success、.progress-bar-info、.progress-bar-warning、.progress-bar-danger)[role="progressbar"]</dd>
+                <dd>.progress-bar.progress-striped : 条纹效果</dd>
+                <dd>.progress-bar.progress-striped.active : 动画条纹效果</dd>
+                <dd>将多个 .progress-bar 放入同一个 .progress 中出现堆叠效果</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width:40%;min-width:20px;">40%</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" style="width:10%;">10%</div>
+            <div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%">20%</div>
+            <div class="progress-bar progress-bar-success progress-bar-striped" style="width:20%">20%</div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width:20%">20%</div>
+            <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:20%">20%</div>
+        </div>
+    </div>
+</div>
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
