@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>列表组</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="page-header">列表组</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>列表组</dt>
+                <dd>ul.list-group>li.list-group-item : 普通列表组</dd>
+                <dd>div.list-group>a.list-group-item : 链接列表组</dd>
+                <dd>.list-group-item(.list-group-item-success、.list-group-item-info、.list-group-item-warning、.list-group-item-danger)</dd>
+                <dd>.list-group-item.active</dd>
+                <dd>.list-group-item.disabled</dd>
+                <dd>div.list-group>a.list-group-item>(h4.list-group-item-heading+p.list-group-item-text)</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item">This is a list group! </li>
+            <li class="list-group-item">This is a list group! </li>
+            <li class="list-group-item">This is a list group! </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item">This is linux! <span class="badge">10</span></li>
+            <li class="list-group-item">This is linux! <span class="badge">10</span></li>
+            <li class="list-group-item">This is linux! <span class="badge">10</span></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="list-group-list">
+            <button class="list-group-item active">button</button>
+            <button class="list-group-item disabled">button</button>
+            <button class="list-group-item">button</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="list-group">
+            <a href="#" class="list-group-item">This is a link-list-group!</a>
+            <a href="#" class="list-group-item active">This is a link-list-group!</a>
+            <a href="#" class="list-group-item disabled">This is a link-list-group!</a>
+            <a href="#" class="list-group-item">This is a link-list-group!</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item">Default</li>
+            <li class="list-group-item list-group-item-success">list-group-item-success</li>
+            <li class="list-group-item list-group-item-info">list-group-item-info</li>
+            <li class="list-group-item list-group-item-warning">list-group-item-warning</li>
+            <li class="list-group-item list-group-item-danger">list-group-item-danger</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-info">
+                <h4 class="list-group-item-heading"> heading </h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading"> heading </h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading"> heading </h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
