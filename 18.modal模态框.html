@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>modal模态框</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">modal</h1>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="btn btn-default" data-toggle="modal" data-target="#modal1">modal</div>
+            <div class="btn btn-default" id="open-modal">Open Modal</div>
+        </div>
+    </div>
+    <ul>
+        <li>
+            <dl>
+                <dt>modal</dt>
+                <dd>button[data-toggle="modal"][data-target="#xxxxx"] : 启动modal</dd>
+                <dd>a[data-toggle="modal"][href="#xxxxx"] : 启动modal</dd>
+                <dd>.modal.fade[role="dialog"]>.modal-dialog[role="document"]>.modal-content>(.modal-header+.modal-body+.modal-footer)</dd>
+                <dd>.modal-dialog(.modal-lg、.modal-sm)</dd>
+                <dd>.modal-header.modal-title : 标题</dd>
+                <dd>.modal[data-dismiss="modal"] : 关闭modal</dd>
+                <dd>.modal-header>.close[data-dismiss="modal"]{&amp;times;}</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>modal方法</dt>
+                <dd>$('#modal1').modal('toggle') : 手动打开或关闭modal，触发 "shown.bs.modal" 或 "hidden.bs.modal"</dd>
+                <dd>$('#modal1').modal('show') : 显示modal，触发 "shown.bs.modal"</dd>
+                <dd>$('#modal1').modal('hide') : 隐藏modal，触发 "hidden.bs.modal"</dd>
+                <dd><pre>
+$('#modal1').modal({
+    "keyboard" : "true", // 键盘上的 esc 键被按下时关闭模态框
+    "show" : "true" // 模态框初始化之后就立即显示出来
+});</pre></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>modal 事件</dt>
+                <dd>$('#modal1').on('event', function(event){var ref=$(event.relatedTarget);});</dd>
+                <dd>"show.bs.modal" : show 方法调用之后立即触发该事件，如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget 属性进行访问</dd>
+                <dd>"shown.bs.modal" : 此事件在模态框已经显示出来（并且同时在 CSS 过渡效果完成）之后被触发。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget 属性进行访问。</dd>
+                <dd>"hide.bs.modal" : hide 方法调用之后立即触发该事件</dd>
+                <dd>"hidden.bs.modal" : 此事件在模态框被隐藏（并且同时在 CSS 过渡效果完成）之后被触发</dd>
+                <dd>"loaded.bs.modal" : 从远端的数据源加载完数据之后触发该事件</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="modal fade" id="modal1" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="close" data-dismiss="modal">&times;</div>
+                <h3 class="modal-title">Header </h3>
+            </div>
+            <div class="modal-body">
+                <p>body 001</p>
+                <p>body 002</p>
+                <p>body 003</p>
+                <p>body 004</p>
+                <p>body 005</p>
+                <p>body 006</p>
+                <p>body 007</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="modal-save">Save</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.js"></script>
+<script type="text/javascript">
+    $('#open-modal').on('click', function () {
+        $('#modal1').modal('show');
+    });
+    $('#modal-save').on('click', function () {
+        alert("Success！");
+        $('#modal1').modal('hide');
+    });
+</script>
+
+<script src="js/autoload.js"></script>
+</body>
+</html>
