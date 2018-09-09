@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>滚动监听</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body data-spy="scroll" data-target="#mynavbar-box" data-offset="100">
+<div class="container">
+    <h1 class="page-header">滚动监听</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>滚动监听</dt>
+                <dd>1、需要加入：body{padding-top:65px;position:relative;}</dd>
+                <dd>body[data-spy="scroll"][data-target="#mynavbar"][data-offset="50"]</dd>
+                <dd>#mynavbar>ul.nav.nav-tabs[role="tablist"]>((li#xx$>a{target})*5)</dd>
+                <dd><pre>
+# 当页面有删除元素影响高度时，需要调用 .scrollspy('refresh') 重新刷新
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+})
+                </pre></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>事件</dt>
+                <dd>activate.bs.scrollspy : 每当一个新条目被激活后都将由滚动监听插件触发此事件
+                    <pre>
+$('#myScrollspy').on('activate.bs.scrollspy', function () {
+  // do something…
+})
+                </pre></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="container navbar navbar-default navbar-fixed-top" id="mynavbar-box">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#php-panel">Php</a></li>
+        <li><a href="#linux-panel">Linux</a></li>
+        <li><a href="#javascript-panel">Javascript</a></li>
+        <li><a href="#css-panel">Css</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default" id="php-panel">
+            <div class="panel-heading">Php heading</div>
+            <div class="panel-body">
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+                <p>Php is good! </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default" id="linux-panel">
+            <div class="panel-heading">Linux heading</div>
+            <div class="panel-body">
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+                <p>Linux is good! </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default" id="javascript-panel">
+            <div class="panel-heading">Javascript heading</div>
+            <div class="panel-body">
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+                <p>Javascript is good! </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default" id="css-panel">
+            <div class="panel-heading">Css heading</div>
+            <div class="panel-body">
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+                <p>Css is good! </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
