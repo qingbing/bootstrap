@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>标签页</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">标签页</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>标签页</dt>
+                <dd>ul.nav.nav-tabs[role="tablist"]>((li[role="presentation"]>a[role="tab"][data-toggle="tab"]{caption})*3)</dd>
+                <dd>.tab-content>((.tab-pane.fade#[role="tabpanel"]{content})*3)</dd>
+                <dd>默认展开的 tab 需要加入 .active</dd>
+                <dd>默认展开的 tab-pane 需要加入 .active,如果加入了 .fade，还必须加入 .in</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>标签页事件</dt>
+                <dd><pre>
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  e.target // newly activated tab
+  e.relatedTarget // previous active tab
+})
+                </pre></dd>
+                <dd>"show.bs.tab" : 当标签 展开 时触发的事件</dd>
+                <dd>"shown.bs.tab" : 当标签 展开后 时触发的事件</dd>
+                <dd>"hide.bs.tab" : 当标签 隐藏 时触发的事件</dd>
+                <dd>"hidden.bs.tab" : 当标签 隐藏后 时触发的事件</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">caption</a></li>
+            <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">caption</a></li>
+            <li role="presentation"><a href="#message" role="tab" data-toggle="tab">caption</a></li>
+        </ul>
+        <ul class="tab-content list-unstyled">
+            <li class="tab-pane fade active in" id="home" role="tabpanel">
+                home
+            </li>
+            <li class="tab-pane fade" id="profile" role="tabpanel">
+                profile
+            </li>
+            <li class="tab-pane fade" id="message" role="tabpanel">
+                message
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
