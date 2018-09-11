@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Collapse折叠效果</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="page-header">Collapse ： 折叠效果</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>Collapse ： 折叠效果</dt>
+                <dd>[data-toggle="collapse"][data-target="#xxx"] : 触发</dd>
+                <dd>.collapse#xxx ： 内容</dd>
+                <dt>方法</dt>
+                <dd>.collapse('toggle')</dd>
+                <dd>.collapse('show')</dd>
+                <dd>.collapse('hide')</dd>
+                <dt>事件</dt>
+                <dd>"show.bs.collapse" : 当标签 展开 时触发的事件</dd>
+                <dd>"shown.bs.collapse" : 当标签 展开后 时触发的事件</dd>
+                <dd>"hide.bs.collapse" : 当标签 隐藏 时触发的事件</dd>
+                <dd>"hidden.bs.collapse" : 当标签 隐藏后 时触发的事件</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <button class="btn btn-warning" data-toggle="collapse" data-target="#mycollapse">more <span class="caret"></span></button>
+    <div class="row collapse" id="mycollapse">
+        <div class="well">this is content.</div>
+    </div>
+</div>
+<div class="container">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#one">php</a></h3>
+            </div>
+            <div id="one" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>php is good.</p>
+                    <p>php is good.</p>
+                    <p>php is good.</p>
+                    <p>php is good.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#two">linux</a></h3>
+            </div>
+            <div id="two" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>linux is good.</p>
+                    <p>linux is good.</p>
+                    <p>linux is good.</p>
+                    <p>linux is good.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#three">Css</a></h3>
+            </div>
+            <div id="three" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Css is good.</p>
+                    <p>Css is good.</p>
+                    <p>Css is good.</p>
+                    <p>Css is good.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
