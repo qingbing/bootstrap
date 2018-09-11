@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>tooltip提示、popover提示框</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">tooltip、popover</h1>
+    <ul>
+        <li>
+            <dl>
+                <dt>tooltip ： 提示信息</dt>
+                <dd>a[data-toggle="tooltip"][title]{display}</dd>
+                <dd>使用该组建，可能是bootstrap整合问题，需要加入触发
+                    <pre>
+    jQuery(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });</pre></dd>
+                <dt>支持方法</dt>
+                <dd>.tooltip('toggle')</dd>
+                <dd>.tooltip('show')</dd>
+                <dd>.tooltip('hide')</dd>
+                <dd>.tooltip('destroy')</dd>
+                <dt>支持事件</dt>
+                <dd>"show.bs.tooltip" : 当 显示 时，触发的事件函数</dd>
+                <dd>"shown.bs.tooltip" : 当 显示后 时，触发的事件函数</dd>
+                <dd>"hide.bs.tooltip" : 当 隐藏 时，触发的事件函数</dd>
+                <dd>"hidden.bs.tooltip" : 当 隐藏后 时，触发的事件函数</dd>
+                <dd>"inserted.bs.tooltip" : 当 工具模板加入到dom后，在"show.bs.tooltip" 之后，触发的事件函数</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>popover ： 提示框</dt>
+                <dd>a.btn.btn-danger[role="button"][data-toggle="popover"][data-trigger="focus"][title][data-content]{Content}</dd>
+                <dd>data-trigger支持 ： click | hover | focus | manual </dd>
+                <dd>使用该组建，可能是bootstrap整合问题，需要加入触发
+                    <pre>
+    jQuery(function () {
+        $('[data-toggle="popover"]').popover();
+    });</pre></dd>
+                <dt>支持方法</dt>
+                <dd>.popover('toggle')</dd>
+                <dd>.popover('show')</dd>
+                <dd>.popover('hide')</dd>
+                <dd>.popover('destroy')</dd>
+                <dt>支持事件</dt>
+                <dd>"show.bs.popover" : 当 显示 时，触发的事件函数</dd>
+                <dd>"shown.bs.popover" : 当 显示后 时，触发的事件函数</dd>
+                <dd>"hide.bs.popover" : 当 隐藏 时，触发的事件函数</dd>
+                <dd>"hidden.bs.popover" : 当 隐藏后 时，触发的事件函数</dd>
+                <dd>"inserted.bs.popover" : 当 工具模板加入到dom后，在"show.bs.popover" 之后，触发的事件函数</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <p>
+        this is <a href="#" data-toggle="tooltip" title="Default Tooltip">Default tooltip(top)</a>.
+        this is <a href="#" data-toggle="tooltip" data-placement="top" title="Top Tooltip">top tooltip</a>.
+        this is <a href="#" data-toggle="tooltip" data-placement="left" title="Left Tooltip">left tooltip</a>.
+        this is <a href="#" data-toggle="tooltip" data-placement="right" title="Right Tooltip">right tooltip</a>.
+        this is <a href="#" data-toggle="tooltip" data-placement="bottom" title="Bottom Tooltip">bottom tooltip</a>.
+    </p>
+</div>
+<div class="container">
+    <a href="javascript:void(0)" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="popover title"
+       data-content="popover content">default popover Content</a>
+    <a href="javascript:void(0)" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="popover title"
+       data-content="popover content" data-placement="top">top popover Content</a>
+    <a href="javascript:void(0)" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="popover title"
+       data-content="popover content" data-placement="right">right popover Content</a>
+    <a href="javascript:void(0)" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="popover title"
+       data-content="popover content" data-placement="left">left popover Content</a>
+    <a href="javascript:void(0)" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="popover title"
+       data-content="popover content" data-placement="middle"> middle popover Content</a>
+</div>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
