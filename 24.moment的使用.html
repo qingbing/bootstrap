@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>moment的使用</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="bs/html5shiv.min.js"></script>
+    <script src="bs/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/h.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    var format = 'YYYY-MM-DD HH:mm:ss';
+    document.writeln("<pre>");
+    document.writeln("format : " + format);
+    document.writeln("========== 创建 ==========");
+    document.writeln("默认当前 : moment() : " + moment().format(format));
+    document.writeln("默认格式 : moment('1995-12-25') : " + moment("1995-12-25").format(format));
+    document.writeln("指定格式 : moment('12-25-1995', 'MM-DD-YYYY') : " + moment('12-25-1995', 'MM-DD-YYYY').format(format));
+    document.writeln("毫秒时间戳 : moment(Date.now()) : " + moment(Date.now()).format(format));
+    document.writeln("Date对象 : moment(new Date()) : " + moment(new Date()).format(format));
+    document.writeln("========== 格式化 ==========");
+    document.writeln("格式化 : moment().format('YYYY-MM-DD HH:mm:ss') : " + moment().format(format));
+    document.writeln("========== 转化成 Date 对象 ==========");
+    document.writeln("Date转换 : moment().toDate() : " + moment().toDate());
+
+    document.writeln("========== 获取/设置时间信息 ==========");
+    document.writeln("获得秒 : moment().second()");
+    document.writeln("设置秒 : moment().second(10)");
+    document.writeln("其他类似方法：");
+    document.writeln("    分 : moment().minute()");
+    document.writeln("    小时 : moment().hour()");
+    document.writeln("    月第几天 : moment().date()");
+    document.writeln("    第几个月 : moment().month()");
+    document.writeln("    年 : moment().year()");
+    document.writeln("    星期 : moment().day()");
+    document.writeln("    当前月有多少天 : moment().daysInMonth()");
+    document.writeln("    一年里的第几天 : moment().dayOfYear()");
+    document.writeln("    一年里的第几周 : moment().week()");
+    document.writeln("    一年里的第几个季度 : moment().quarter()");
+
+    document.writeln("========== 操作 ==========");
+    document.writeln("之后的第7天(第2个参数还可以是 'months', 'years' 等复数) : moment().add(7, 'days')");
+    document.writeln("之后的第7天: moment().add(7, 'd')");
+    document.writeln("上个月: moment().subtract(1, 'months')");
+    document.writeln("这周的第一天: moment().startOf('hour')");
+    document.writeln("这周的第一天(等效与 moment().minutes(0).seconds(0).milliseconds(0),还支持 'year'，'month' 等): moment().startOf('week')");
+    document.writeln("这周的最后一天: moment().endOf('week')");
+
+    document.writeln("========== 查询 ==========");
+    document.writeln("  早于");
+    document.writeln("    moment('2010-10-20').isBefore('2010-10-21')");
+    document.writeln("    moment('2010-10-20').isBefore('2010-12-31', 'year')");
+    document.writeln("    moment('2010-10-20').isBefore('2011-01-01', 'year')");
+    document.writeln("  相同");
+    document.writeln("    moment('2010-10-20').isSame('2010-10-20')");
+    document.writeln("    moment('2010-10-20').isSame('2009-12-31', 'year')");
+    document.writeln("    moment('2010-10-20').isSame('2010-01-01', 'year')");
+    document.writeln("  晚于");
+    document.writeln("    moment('2010-10-20').isAfter('2010-10-19')");
+    document.writeln("    moment('2010-10-20').isAfter('2010-01-01', 'year')");
+    document.writeln("    moment('2010-10-20').isAfter('2009-12-31', 'year')");
+    document.writeln("  之间");
+    document.writeln("    moment('2010-10-20').isBetween('2010-10-19', '2010-10-25')");
+    document.writeln("    moment('2010-10-20').isBetween('2010-01-01', '2012-01-01', 'year')");
+    document.writeln("    moment('2010-10-20').isBetween('2009-12-31', '2012-01-01', 'year')");
+    document.writeln("  闰年");
+    document.writeln("    moment().isLeapYear()");
+    document.writeln("</pre>");
+
+
+    console.log('== 时间加减 ==');
+    console.log(moment().add(1, 'days').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().add(1, 'months').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().add(1, 'years').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().subtract(1, 'days').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().subtract(1, 'months').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().subtract(1, 'years').format(' YYYY-MM-DD HH:mm:ss'));
+
+    console.log('== 完整分钟 ==');
+    console.log(moment().startOf('minute').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().endOf('minute').format(' YYYY-MM-DD HH:mm:ss'));
+
+    console.log('== 完整小时 ==');
+    console.log(moment().startOf('hour').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().endOf('hour').format(' YYYY-MM-DD HH:mm:ss'));
+
+    console.log('== 完整天 ==');
+    console.log(moment().startOf('date').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().endOf('date').format(' YYYY-MM-DD HH:mm:ss'));
+
+    console.log('== 完整星期 ==');
+    console.log(moment().startOf('week').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().endOf('week').format(' YYYY-MM-DD HH:mm:ss'));
+
+    console.log('== 完整月 ==');
+    console.log(moment().startOf('month').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().endOf('month').format(' YYYY-MM-DD HH:mm:ss'));
+
+    console.log('== 完整年 ==');
+    console.log(moment().startOf('year').format(' YYYY-MM-DD HH:mm:ss'));
+    console.log(moment().endOf('year').format(' YYYY-MM-DD HH:mm:ss'));
+</script>
+
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="js/autoload.js"></script>
+</body>
+</html>
