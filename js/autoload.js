@@ -18,6 +18,9 @@ var Loader = {
     player: function () {
         this.loadJs('/plugins/bootstrap.player.js');
     },
+    menu: function () {
+        this.loadJs('/plugins/bootstrap.menu.js');
+    },
     datePicker: function () {
         this.loadCss('/plugins/daterangepicker/daterangepicker.min.css');
         this.loadMoment(function () {
@@ -38,6 +41,7 @@ var Loader = {
     configs: {
         'tab': '.h-tab',
         'player': '.h-player',
+        'menu': '.h-menu',
         'datePicker': '.h-datePicker'
     }
 };
