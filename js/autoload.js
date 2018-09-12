@@ -2,6 +2,7 @@
  * 定义一些常用的或自动导入的类
  */
 var Loader = {
+    __loadedPlugins: {},
     loadCss: function (path, basePath) {
         if (basePath) {
             H.loadCss(basePath + path);
@@ -12,11 +13,34 @@ var Loader = {
     loadJs: function (path, callback, id) {
         H.loadJs(H.jsPath() + path, callback, id);
     },
-    tab: function () {
-        this.loadJs('/plugins/bootstrap.tab.js');
+    __loadPlugin: function (cName, css, js, callback) {
+        if (!this.__loadedPlugins[cName]) {
+            this.__loadedPlugins[cName] = true;
+            H.isEmpty(css) || (this.loadCss(css));
+            if (!H.isEmpty(js)) {
+                this.loadJs(js, function () {
+                    if (H.isFunction(callback)) {
+                        callback();
+                    }
+                });
+            } else if (H.isFunction(callback)) {
+                callback();
+            }
+        } else if (H.isFunction(callback)) {
+            callback();
+        }
     },
-    player: function () {
-        this.loadJs('/plugins/bootstrap.player.js');
+    player: function ($triggers) {
+        this.__loadPlugin('player', '/plugins/player/css/plugin.css',
+            '/plugins/player/bootstrap.player.js', function () {
+                $triggers.player();
+            });
+    },
+    tab: function ($triggers) {
+        this.__loadPlugin('tab', '/plugins/tab/css/plugin.css',
+            '/plugins/tab/bootstrap.tab.js', function () {
+                $triggers.bootTab();
+            });
     },
     menu: function () {
         this.loadJs('/plugins/bootstrap.menu.js');
@@ -39,17 +63,18 @@ var Loader = {
         });
     },
     configs: {
-        'tab': '.h-tab',
-        'player': '.h-player',
-        'menu': '.h-menu',
+        'tab': '.w-tab',
+        'player': '.w-player',
+        'menu': '.w-menu',
         'datePicker': '.h-datePicker'
     }
 };
 
 (function ($) {
     H.each(Loader.configs, function (key, target) {
-        if ($(target).length > 0 && H.isFunction(Loader[key])) {
-            Loader[key]();
+        var $targets = $(target);
+        if ($targets.length > 0 && H.isFunction(Loader[key])) {
+            Loader[key]($targets);
         }
     });
 })(jQuery);
