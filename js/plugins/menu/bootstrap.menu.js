@@ -1,25 +1,39 @@
-/**
- * HTML 布局
- * .player[data-num-control][data-carousel-control][data-interval]>ul.items>(li>img+div.carousel-caption>(h3+p))*3
- * 参数设置
- *  num-control : 是否有数字控制，true为需要
- *  carousel-control : 是否有左右控制，true为需要
- *  interval : 轮播间隔时间
- */
 (function ($) {
-    $('.h-menu').each(function (i) {
-        var $this = $(this).addClass('panel-group');
-        // 获取ID
-        var id = $this.attr('id');
-        if (!id) {
-            id = "menu-" + i;
-            $this.attr('id', id);
+    $.fn.extend({
+        /**
+         *
+         * @param options
+         * @returns {template}
+         */
+        menu: function (options) {
+            $(this).each(function (i) {
+                var $trigger = $(this);
+                var id = $trigger.attr('id');
+                if (!id) {
+                    id = "MENU_" + i;
+                    $trigger.attr('id', id);
+                }
+                $trigger.find('.panel').each(function (ei) {
+                    var $panel = $(this);
+                    var $heading = $panel.find('.panel-heading').attr({
+                        "data-toggle": "collapse",
+                        "data-parent": ("#" + id)
+                    });
+                    var $menu = $panel.children('.menu-list').addClass('list-group panel-collapse collapse');
+                    if($menu.hasClass('active')){
+                        $menu.addClass('in');
+                    }
+                    var mid = $menu.attr('id');
+                    if (!mid) {
+                        mid = id + "_" + ei;
+                        $menu.attr('id', mid);
+                    }
+                    $heading.attr('data-target', '#' + mid);
+                    $menu.find('a').addClass('list-group-item');
+                });
+                return true;
+            }).collapse();
+            return this;
         }
-        var $panels = $this.find('.panel');
-
-        console.log($panels.length)
-
-        console.log(id)
-
     });
 })(jQuery);

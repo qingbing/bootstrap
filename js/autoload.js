@@ -42,8 +42,11 @@ var Loader = {
                 $triggers.bootTab();
             });
     },
-    menu: function () {
-        this.loadJs('/plugins/bootstrap.menu.js');
+    menu: function ($triggers) {
+        this.__loadPlugin('tab', '/plugins/menu/css/plugin.css',
+            '/plugins/menu/bootstrap.menu.js', function () {
+                $triggers.menu();
+            });
     },
     datePicker: function () {
         this.loadCss('/plugins/daterangepicker/daterangepicker.min.css');
