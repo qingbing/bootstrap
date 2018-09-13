@@ -103,3 +103,12 @@ console.log(H.jsPath());
 // 获取当前项目的css路径
 console.log(H.cssPath());
 */
+// cookie 使用
+// 设置cookie
+// H.setCookie('name', {good: 'go', sex: 'xx'});
+// 获取cookie
+// console.log(H.getCookie('name'));
+// 删除cookie
+// console.log(H.delCookie('name'));
+// 清除cookie
+// console.log(H.flushCookie());

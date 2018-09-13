@@ -71,6 +71,43 @@ if (typeof md5 === 'undefined'){
         }
     };
 
+    var Cookie = {
+        set: function (name, val, expire) {
+            var vs = name + '=' + Url.encode(Unit.toString(val)) + ';';
+            if (expire) {
+                var d = new Date();
+                d.setTime(d.getTime() + expire * 1000);
+                vs += 'expires=' + d.toUTCString() + ';';
+            }
+            document.cookie = vs + 'path=/;';
+        }, get: function (name) {
+            var sc = document.cookie;
+            var ac = sc.split('; ');
+            for (var i in ac) {
+                var a = ac[i].split('=');
+                if (!a[1]) {
+                    return '';
+                }
+                if (name === a[0]) {
+                    return Unit.toObject(Url.decode(a[1]));
+                }
+            }
+            return '';
+        }, del: function (name) {
+            var _c = Cookie.get(name);
+            if (_c != null) {
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;";
+            }
+        }, flush: function () {
+            var sc = document.cookie;
+            var ac = sc.split('; ');
+            for (var i in ac) {
+                var a = ac[i].split('=');
+                Cookie.del(a[0]);
+            }
+        }
+    };
+
     var Unit = {
         rand: function () {
             return Math.ceil(Math.pow(10, 16) * Math.random());
@@ -155,6 +192,9 @@ if (typeof md5 === 'undefined'){
     var Url = {
         encode: function (v) {
             return encodeURIComponent(v);
+        },
+        decode: function (v) {
+            return decodeURIComponent(v);
         },
         buildQuery: function () {
             function c(j, s, a) {
@@ -330,6 +370,11 @@ if (typeof md5 === 'undefined'){
         isObject: VType.isObject,
         isArray: VType.isArray,
         isEmpty: VType.isEmpty,
+
+        setCookie : Cookie.set,
+        getCookie : Cookie.get,
+        delCookie : Cookie.del,
+        flushCookie : Cookie.flush,
 
         rand: Unit.rand,
         random: Unit.random,
