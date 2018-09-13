@@ -27,7 +27,7 @@
                 var $dls = $this.children('dl');
                 var $dts = $dls.children('dt');
                 var $dds = $dls.children('dd');
-                $dts.prepend('<i class="fa fa-folder"></i>');
+                $dts.prepend('<i class="glyphicon glyphicon-folder-close"></i>');
                 // Init menu piece.
                 $dds.removeClass('act').hide();
 
@@ -35,15 +35,15 @@
                     var $open_dl;
                     if (ops.share) {// share{}
                         $open_dl = $dls.eq(ops.openDlIndex);
-                        $open_dl.find('dt').addClass('act').find('.fa')
-                            .removeClass('fa-folder').addClass('fa-folder-open');
+                        $open_dl.find('dt').addClass('act').find('.glyphicon')
+                            .removeClass('glyphicon-folder-close').addClass('glyphicon-folder-open');
                         $open_dl.children('dd').show();
                     } else {
                         if (H.isArray(ops.openDlIndex)) {
                             for (var i in ops.openDlIndex) {
                                 $open_dl = $dls.eq(ops.openDlIndex[i]);
-                                $open_dl.find('dt').addClass('act').find('.fa')
-                                    .removeClass('fa-folder').addClass('fa-folder-open');
+                                $open_dl.find('dt').addClass('act').find('.glyphicon')
+                                    .removeClass('glyphicon-folder-close').addClass('glyphicon-folder-open');
                                 $open_dl.children('dd').show();
                             }
                         }
@@ -72,23 +72,23 @@
                 // 点击菜单函数
                 function clickDtMenu($dls, $dt) {
                     var index;
-                    var $arrow = $dt.children('.fa'), isOpened = $arrow.hasClass('fa-folder-open');
+                    var $arrow = $dt.children('.glyphicon'), isOpened = $arrow.hasClass('glyphicon-folder-open');
                     if (ops.share) {
                         if (isOpened) {
-                            $dt.removeClass('act').children('.fa')
-                                .removeClass('fa-folder-open').addClass('fa-folder');
+                            $dt.removeClass('act').children('.glyphicon')
+                                .removeClass('glyphicon-folder-open').addClass('glyphicon-folder-close');
                             $dt.siblings('dd').slideUp();
                             if (ops.cache) {
                                 H.setCookie(ops.name, "");
                             }
                         } else {
                             // Close all.
-                            $dls.removeClass('act').find('dt .fa')
-                                .removeClass('fa-folder-open').addClass('fa-folder');
+                            $dls.removeClass('act').find('dt .glyphicon')
+                                .removeClass('glyphicon-folder-open').addClass('glyphicon-folder-close');
                             $dls.children('dd').slideUp();
                             // Open active
-                            $dt.addClass('act').children('.fa')
-                                .removeClass('fa-folder').addClass('fa-folder-open');
+                            $dt.addClass('act').children('.glyphicon')
+                                .removeClass('glyphicon-folder-close').addClass('glyphicon-folder-open');
                             $dt.siblings('dd').slideDown();
                             if (ops.cache) {
                                 H.setCookie(ops.name, $dls.index($dt.parent()));
@@ -96,8 +96,8 @@
                         }
                     } else {
                         if (isOpened) {
-                            $dt.removeClass('act').children('.fa')
-                                .removeClass('fa-folder-open').addClass('fa-folder');
+                            $dt.removeClass('act').children('.glyphicon')
+                                .removeClass('glyphicon-folder-open').addClass('glyphicon-folder-close');
                             $dt.siblings('dd').slideUp();
                             if (ops.cache) {
                                 index = $dls.index($dt.parent());
@@ -109,8 +109,8 @@
                                 H.setCookie(ops.name, ops.openDlIndex);
                             }
                         } else {
-                            $dt.addClass('act').children('.fa')
-                                .removeClass('fa-folder').addClass('fa-folder-open');
+                            $dt.addClass('act').children('.glyphicon')
+                                .removeClass('glyphicon-folder-close').addClass('glyphicon-folder-open');
                             $dt.siblings('dd').slideDown();
                             if (ops.cache) {
                                 index = $dls.index($dt.parent());
